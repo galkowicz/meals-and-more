@@ -1,0 +1,74 @@
+.main-header {
+
+  &__nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .logo {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      &__text {
+        display: inline-block;
+        margin-left: .4rem;
+      }
+    }
+
+    .nav-icon {
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-list {
+      display: flex;
+      list-style-type: none;
+      &__item {
+        padding: 1rem;
+      }
+      @include sm {
+        display: none;
+      }
+    }
+
+  }
+
+  .subtitle {
+    @include sm {
+      display: none;
+    }
+  }
+
+  .title {
+    @include sm {
+      text-align: center;
+    }
+  }
+
+  .side-note {
+    display: none;
+    @include sm {
+      display: block;
+      float: right;
+    }
+  }
+}
+
+.dot {
+  height: 25px;
+  width: 25px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.square {
+  height: 25px;
+  width: 25px;
+  background-color: #bbb;
+  display: none;
+  @include sm {
+    display: inline-block;
+  }
+}

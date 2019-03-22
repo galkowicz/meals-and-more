@@ -1,3 +1,13 @@
-.red {
-  background: red;
+@import "mixins";
+@import "header";
+
+@function rem-calc($size) {
+  $remSize: $size / 16;
+  @return #{$remSize}rem;
+}
+
+main, header, section, aside, footer {
+  margin: 0;
+  padding: rem-calc(20);
+  border: 1px solid #000000;
 }
