@@ -27,7 +27,7 @@
       &__item {
         padding: 1rem;
       }
-      @include sm {
+      @include respond-to(mobile) {
         display: none;
       }
     }
@@ -35,20 +35,21 @@
   }
 
   .subtitle {
-    @include sm {
+    width: 60%;
+    @include respond-to(mobile) {
       display: none;
     }
   }
 
   .title {
-    @include sm {
+    @include respond-to(mobile) {
       text-align: center;
     }
   }
 
   .side-note {
     display: none;
-    @include sm {
+    @include respond-to(mobile) {
       display: block;
       float: right;
     }
@@ -68,7 +69,7 @@
   width: 25px;
   background-color: #bbb;
   display: none;
-  @include sm {
+  @include respond-to(mobile) {
     display: inline-block;
   }
 }

@@ -1,5 +1,6 @@
 @import "mixins";
 @import "header";
+@import "body";
 
 @function rem-calc($size) {
   $remSize: $size / 16;
@@ -8,6 +9,13 @@
 
 main, header, section, aside, footer {
   margin: 0;
+  font-size: 12px;
   padding: rem-calc(20);
   border: 1px solid #000000;
+}
+
+.side-margin {
+  @include respond-to(desktop) {
+    margin: 0 7rem 0;
+  }
 }

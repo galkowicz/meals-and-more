@@ -1,0 +1,92 @@
+.main-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  column-gap: 1rem;
+
+  :first-child {
+    grid-column: 1 / -1;
+  }
+
+  @include respond-to(mobile) {
+    grid-template-columns: 1fr;
+  }
+
+  &__aside {
+    @include respond-to(mobile) {
+      display: none;
+    }
+  }
+
+  .header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    overflow-x: auto;
+
+    .filter-list {
+      display: flex;
+      list-style-type: none;
+    }
+
+    .side-note {
+
+    }
+
+    .filter-list {
+      display: flex;
+      white-space: nowrap;
+      padding-left: 0;
+
+      &__item {
+        padding: 0 1rem;
+        margin-right: 1rem;
+        border-style: solid;
+        border-width: 2px;
+      }
+    }
+
+    .side-note {
+      white-space: nowrap;
+      margin-left: auto;
+    }
+  }
+
+  .options {
+    .cards {
+      list-style-type: none;
+      padding-left: 0;
+      .item {
+        margin-top: 1rem;
+        display: flex;
+        flex-direction: row;
+        &__info {
+          &__header {
+            display: flex;
+            flex-direction: row;
+            .header-side {
+
+              .reviews {
+                @include respond-to(desktop) {
+                  display: none;
+                }
+              }
+            }
+          }
+        }
+        &__img {
+          img {
+            height: auto;
+            width: 100%;
+            background-color: grey;
+          }
+          flex-basis: 50%;
+          max-width: 100%;
+        }
+        @include respond-to(mobile) {
+
+        }
+      }
+    }
+  }
+
+}
