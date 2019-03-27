@@ -1,0 +1,207 @@
+.card {
+
+  font-family: Montserrat, serif;
+  box-shadow: 2px 2px 7px 0 gainsboro;
+
+  @include respond-to(mobile) {
+    width: 21.0625rem;
+  }
+  @include respond-to(nodesktop) {
+    width: 21.0625rem;
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 0;
+
+    .title {
+      display: inline-block;
+      color: #339d48;
+      margin-left: 0.375rem;
+      text-transform: uppercase;
+    }
+
+    .icon {
+      display: flex;
+      align-items: center;
+      margin-left: 1rem;
+    }
+
+    .side {
+      display: flex;
+      flex-direction: column;
+      margin: auto 0.75rem auto 6rem;
+
+      &__score-text {
+        font-size: 12px;
+
+        .number {
+          font-size: 15px;
+          font-weight: 700;
+        }
+      }
+
+      &__reviews {
+        text-transform: capitalize;
+        color: #ff6a56;
+        font-size: 12px;
+        font-weight: 200;
+      }
+    }
+  }
+
+  &__img {
+    top: 3rem;
+    position: relative;
+
+    img {
+      width: 100%;
+    }
+
+    .play-icon {
+      position: absolute;
+      width: 3rem;
+      height: 3rem;
+      top: 5rem;
+      left: 9rem;
+      background-color: black;
+      opacity: 0.5;
+      border-radius: 50%;
+
+      img {
+        width: 13px;
+        height: 21px;
+        top: 15px;
+        left: 19px;
+        position: absolute;
+      }
+    }
+  }
+
+  &__info {
+    .sub-info {
+      display: flex;
+      flex-direction: row;
+      padding-top: 2.5rem;
+      flex-wrap: wrap;
+
+      .info-list {
+        list-style: none;
+        padding-left: 1rem;
+
+        &__item {
+          font-size: 13px;
+          font-weight: 400;
+          margin: 0 0 6px 0;
+
+          .icon {
+            margin-right: 3px;
+          }
+        }
+
+      }
+
+      .info-btn {
+        height: 1rem;
+        padding: 7px 16px 24px;
+        background-color: #ff6a56;
+        border-radius: 3px;
+        margin: 1rem 0 1rem 1rem;
+
+        &__text {
+          font-size: 13px;
+          font-weight: 500;
+          text-transform: capitalize;
+          color: #ffffff;
+        }
+      }
+
+      .reviews {
+        text-transform: capitalize;
+        color: #ff6a56;
+        font-size: 14px;
+        font-weight: 400;
+        @include respond-to(nodesktop) {
+          display: none;
+        }
+      }
+    }
+  }
+
+
+  @include respond-to(desktop) {
+    width: 42.5rem;
+    display: flex;
+    flex-direction: row;
+
+    &__header {
+      top: auto;
+
+      .title {
+        font-size: 16px;
+      }
+
+      .icon {
+        width: 2.25rem;
+
+        img {
+          width: 2.25rem;
+          height: 2.375rem;
+        }
+
+      }
+
+      .side {
+        &__score-text {
+          display: flex;
+          font-size: 11px;
+          flex-direction: column;
+
+          .number {
+            font-size: 25px;
+            text-align: center;
+          }
+        }
+
+        &__reviews {
+          display: none;
+        }
+      }
+    }
+
+    &__img {
+      position: static;
+
+      img {
+        width: 21.0625rem;
+      }
+    }
+
+    &__info {
+      .sub-info {
+        .info-list {
+          width: 100%;
+          padding-top: 0.6rem;
+
+          &__item {
+            font-size: 14px;
+          }
+        }
+
+        .info-btn {
+          padding: 11px 38px 28px;;
+
+          &__text {
+            font-size: 18px;
+          }
+        }
+
+        .reviews {
+          padding: 1.5rem 2rem;
+        }
+      }
+    }
+  }
+}

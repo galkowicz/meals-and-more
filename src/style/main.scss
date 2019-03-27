@@ -1,6 +1,7 @@
 @import "mixins";
 @import "header";
 @import "body";
+@import "responsive-pixel-perfect";
 
 @function rem-calc($size) {
   $remSize: $size / 16;
@@ -9,7 +10,7 @@
 
 main, header, section, aside, footer {
   margin: 0;
-  font-size: 12px;
+  //font-size: 12px;
   padding: rem-calc(20);
   border: 1px solid #000000;
 }
